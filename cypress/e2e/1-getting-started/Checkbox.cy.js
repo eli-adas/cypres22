@@ -12,6 +12,7 @@ describe ("CheckBox",() =>{
 
     })
 
+    //También se puede usar con radibo button
     it("Check one", () => {
         cy.visit("https://the-internet.herokuapp.com/checkboxes")
         cy.title().should('eq','The Internet')
@@ -19,6 +20,7 @@ describe ("CheckBox",() =>{
 
     })
 
+    //Ya ho puedo usar should("be.checked") si hago simplemente click
     it.only("Check by click", () => {
         cy.visit("https://the-internet.herokuapp.com/checkboxes")
         cy.title().should('eq','The Internet')

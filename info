@@ -1,3 +1,6 @@
 1. init npm init
 2. Installation  npm install cypress --save-dev
 3. Open  npx cypress open
+
+
+Install plugin for use xpath: https://www.npmjs.com/package/cypress-xpath
