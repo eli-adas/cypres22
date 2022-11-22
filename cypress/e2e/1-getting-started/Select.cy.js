@@ -28,12 +28,33 @@ describe ("Basic dropdown",() =>{
     })
 
     //Da error si pones should("have.value")
-    it.only("Forze click in a hidden element", () => {
+    it("Forze click in a hidden element", () => {
         cy.visit("https://the-internet.herokuapp.com/dropdown")
         cy.title().should('eq','The Internet')
         cy.get('#dropdown').should("be.visible").select("Option 2", {force:true}).invoke('val').should("eq","2")
     })
 
-    //https://docs.cypress.io/api/commands/select#Syntax
+
+    it("Select two options", () => {
+        cy.visit("https://demoqa.com/select-menu")
+        cy.title().should('eq','ToolsQA')
+        cy.get("#cars").should("be.visible").select(["Volvo", "Opel"])
+
+    })
+
+    //Select Volvo, Opel, si lo seleccionas entonces... Abro una nueva función (es como un if).
+    //Si lo selecciona quiero que clique en otra opción
+    //Al usar un select y despues el otro, desmarca las opciones del primero y marca la de saab
+    it.only("Select two option whith a promise", () => {
+        cy.visit("https://demoqa.com/select-menu")
+        cy.title().should('eq','ToolsQA')
+        cy.get("#cars").should("be.visible").select(["Volvo", "Opel"]).then(() =>{
+            cy.wait(3000)
+            cy.get("#cars").should("be.visible").select("Saab")
+        })
+
+    })
+
+    
 
 })
