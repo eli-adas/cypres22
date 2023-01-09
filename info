@@ -6,3 +6,7 @@ Format lines: option + may + F
 
 
 Install plugin for use xpath: https://www.npmjs.com/package/cypress-xpath
+
+config:
+https://docs.cypress.io/guides/references/configuration
+https://docs.cypress.io/api/cypress-api/config#Arguments
