@@ -10,3 +10,13 @@ Install plugin for use xpath: https://www.npmjs.com/package/cypress-xpath
 config:
 https://docs.cypress.io/guides/references/configuration
 https://docs.cypress.io/api/cypress-api/config#Arguments
+
+usando consola:
+https://docs.cypress.io/guides/guides/command-line#Installation
+node_modules/.bin/cypress run  //ejecuta todos los test que tengas, al final te saca un cuadro con un report. Ejecucion headless
+
+npx cypress run --headed  //fuerza a levantar navegador
+
+npx cypress run --spec "cypress/e2e/1-getting-started/Asserts.cy.js"  //Ejecutar un test concreto
+npx cypress run --spec "cypress/e2e/1-getting-started/*"  //Ejecutar todos los test en un spec
+
