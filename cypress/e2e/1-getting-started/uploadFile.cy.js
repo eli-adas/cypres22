@@ -3,6 +3,8 @@ import 'cypress-file-upload'
 
 describe ("Upload file",() =>{
 
+    //No abre ni el cuadro de diálogo, directamente la sube.
+    //Antes de comenzar he instalado un plugin: https://github.com/abramenal/cypress-file-upload#contributors
     it("Load files", () => {
         cy.visit("https://demoqa.com/automation-practice-form")
         cy.title().should("eq","ToolsQA")
