@@ -27,6 +27,8 @@ describe ("Cypress eventos mouse",() =>{
     })
 
     //No he conseguido moverlo ni usando la documentación de cypress
+    //Lo he conseguido con el metodo .stepUp() que hace incrementos en campos input de unidades en función de como esté definido
+    //https://developer.mozilla.org/en-US/docs/Web/API/HTMLInputElement/stepUp
     it.only("Slider", () => {
         let tiempo = 1000
         cy.visit('https://demoqa.com/slider')
